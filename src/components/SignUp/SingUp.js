@@ -8,8 +8,8 @@ const SingUp = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate()
     const [createUserWithEmailAndPassword, user, hookError] = useCreateUserWithEmailAndPassword(auth)
+    const navigate = useNavigate();
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -36,11 +36,6 @@ const SingUp = () => {
             setError('Password must be 6 characters or longer')
         }
         createUserWithEmailAndPassword(email, password)
-        // .then(result => {
-        //     // const user = result.user;
-        //     console.log('user created');
-        // });
-
     }
 
     return (
