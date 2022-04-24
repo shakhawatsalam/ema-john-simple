@@ -16,7 +16,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = loading.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
 
 
